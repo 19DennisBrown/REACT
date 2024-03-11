@@ -1,23 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import Driver from './components/one.js'
+import React from 'react'
+
 
 function App() {
+  // Function
+  const x = 5;
+  let text = "Goodbye";
+  if (x < 10) {
+    text = "Hello";
+  }
+  // Class component
+  class Car extends React.Component{
+    render(){
+      return <>
+        <h1>{5+9}</h1>
+      </>
+    }
+  }
+  // function components
+  function Lorry(props){
+    return <h1>{props.name}</h1>
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Cherries</li>
+      </ul>
+      <h1>{text}</h1>
+      <Car name="Car" />
+      <Lorry name="Lorry" />
+      <Driver work="Drivers" />
     </div>
   );
 }
