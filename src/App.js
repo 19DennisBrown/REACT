@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Driver from './components/one.js'
+import Fetch from './components/api.js'
 import React from 'react'
 
 
@@ -26,15 +27,12 @@ function App() {
   
   return (
     <div className="App">
-      <ul>
-        <li>Apples</li>
-        <li>Bananas</li>
-        <li>Cherries</li>
-      </ul>
+      
       <h1>{text}</h1>
       <Car name="Car" />
       <Lorry name="Lorry" />
       <Driver work="Drivers" />
+      <  Fetch />
     </div>
   );
 }
