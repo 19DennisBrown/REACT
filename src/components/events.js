@@ -1,12 +1,19 @@
 
+import React from 'react'
 
-function makeEvent (){
-
-  const events=()=>{
-    alert ('Ents live')
+class Action extends React.Component{
+  toggle = (a)=>{
+    alert(a)
   }
-  return <>
-    <buton onClick={events}>Click</buton>
-  </>
+  
+  render(){
+    return <>
+      <button 
+        onClick = {()=>this.toggle('Event started')}>
+          Start
+      </button>
+    </>
+  }
 }
-export default makeEvent
+
+export default Action

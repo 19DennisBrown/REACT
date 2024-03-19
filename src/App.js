@@ -1,8 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Driver from './components/one.js'
 import Fetch from './components/api.js'
-import makeEvent from './components/events.js'
+import Action from './components/events.js'
+import Scored from './components/conditionals.js'
 import React from 'react'
 
 
@@ -25,15 +26,17 @@ function App() {
   function Lorry(props){
     return <h1>{props.name}</h1>
   }
+  const scorers = ['Ford', 'BMW', 'Audi'];
   
   return (
     <div className="App">
-      
       <h1>{text}</h1>
       <Car name="Car" />
       <Lorry name="Lorry" />
       <Driver work="Drivers" />
       <  Fetch />
+      <Action/>
+      <Scored isGoal={true} scorers = {scorers} />
     </div>
   );
 }

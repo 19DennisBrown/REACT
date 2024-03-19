@@ -6,7 +6,7 @@ import axios from 'axios'
 
 
 function Fetch(){
-  const fetching= async()=>{
+  const fetching = async()=>{
      await axios.get()
     .then(response=>{console.log(response.data)})
     .catch(error=>{console.log(error)})

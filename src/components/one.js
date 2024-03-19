@@ -1,34 +1,34 @@
-import React from "react"
 
 
-
-
+import React from 'react'
 class Driver extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      age : 23,
-      nationality: 'Kenyan',
-    };
-    // componentDidMount(){
-    //   setTimeout(() => {
-    //     this.setState({age: 25})
-    //   }, 1000);
-    };
-    changeNationality = () =>{
-      this.setState({nationality:"Ugandan"})
-    };
-  };
-  render(){
-   return  <>
-      <h2>This is the {this.props.work}. Driver is a {this.state.nationality}.</h2>;
-      <button
-        type="button"
-        onClick={this.changeNationality} 
-      >
-        Change Country
-      </button>;
-    </>;
-  }
+    constructor(props){
+      super(props);
+      this.state = {
+        age: 11,
+        nationality : 'Kenyan',
+        work : 'driver',
+      }
+    }
+    changeNationality = ()=>{
+      this.setState({nationality:'Uganda'})
+    }
+    render(){
+      return <>
+        <h2>
+          Profession is {this.state.work}
+        </h2>
+        <button 
+          onClick={this.changeNationality}
+        >
+          Switch
+        </button>
+        <h3>
+          <i>
+            {this.state.nationality}
+          </i>
+        </h3>
+      </>
+    }
 }
-export default Driver 
+export default Driver
